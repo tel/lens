@@ -1,5 +1,6 @@
 3.10
 ----
+* Added the `As a = Equality' a a` type synonym
 * Changed `anon` to take a `Prism`.
 * Added `nearly` to `Control.Lens.Prism`.
 * Added `Control.Lens.Empty`, exporting `_Empty`.
