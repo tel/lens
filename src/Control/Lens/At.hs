@@ -115,8 +115,9 @@ containsIx :: (Contravariant f, Functor f, Ixed (Accessor Any) m) => Index m -> 
 containsIx i f = coerce . Lens.indexed f i . has (ix i)
 {-# INLINE containsIx #-}
 
--- | A definition of 'ix' for types with an 'At' instance. This is the default
--- if you don't specify a definition for 'contains' and you are on GHC >= 7.0.2
+-- | A definition of 'contains' for types with an 'At' instance. This
+-- is the default if you don't specify a definition for 'contains' and
+-- you are on GHC >= 7.0.2
 containsAt :: (Contravariant f, Functor f, At m) => Index m -> IndexedLensLike' (Index m) f m Bool
 containsAt i f = coerce . Lens.indexed f i . views (at i) isJust
 {-# INLINE containsAt #-}
